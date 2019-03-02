@@ -16,7 +16,7 @@ import requireAuth from './components/hoc/RequireAuth';
 import requireNotAuth from './components/hoc/RequireNotAuth';
 
 export default (
-  <Route path="/reduxauth" component={App}>
+  <Route path="/" component={App}>
     <IndexRoute component={requireNotAuth(Signup)} />
     <Route path="signin" component={requireNotAuth(Signin)} />
     <Route path="signup" component={requireNotAuth(Signup)} />

@@ -19,6 +19,7 @@ class VerifyEmail extends Component {
     this.props.verifyEmail({ email, token });
   }
 
+
   resendEmail(props) {
     this.setState({ resend: true });
     this.props.resendVerification(props);
@@ -44,7 +45,7 @@ class VerifyEmail extends Component {
         {
           this.state.resend &&
             <p className="resended">
-              Email verification code has been resended
+              Email verification code has been resent
             </p>
         }
       </div>

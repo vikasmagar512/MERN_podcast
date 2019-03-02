@@ -6,25 +6,28 @@ export default function (ComposedComponent) {
   class Authentication extends Component {
     componentWillMount() {
       if (!this.props.authenticated) {
-        browserHistory.push('/reduxauth/signup');
+        debugger
+        browserHistory.push('/signin');
       }
     }
 
     componentWillUpdate(nextProps) {
       if (!nextProps.authenticated) {
-        browserHistory.push('/reduxauth/signup');
+        browserHistory.push('/signin');
       }
     }
 
     render() {
-      return <ComposedComponent {...this.props} />
+      return this.props.authenticated ? <ComposedComponent {...this.props} /> : null
     }
   }
 
   Authentication.propTypes = { authenticated: PropTypes.bool };
 
   function mapStateToProps(state) {
-    return { authenticated: state.auth.authenticated };
+    debugger
+    let k = { authenticated: state.auth.authenticated };
+    return k
   }
 
   return connect(mapStateToProps)(Authentication);

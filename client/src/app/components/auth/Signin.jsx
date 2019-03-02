@@ -38,7 +38,7 @@ class Signin extends Component {
 
           {/* Forgot password */}
           <div className="password-forgot">
-            <Link to="/reduxauth/reset-password">I forgot my password</Link>
+            <Link to="/reset-password">I forgot my password</Link>
           </div>
 
           {/* Server error message */}
@@ -51,7 +51,7 @@ class Signin extends Component {
           {/* Signup button */}
           <div className="form-bottom">
             <p>Don't have an account?</p>
-            <Link to="/reduxauth/signup">Click here to sign up</Link>
+            <Link to="/signup">Click here to sign up</Link>
           </div>
         </form>
       </div>

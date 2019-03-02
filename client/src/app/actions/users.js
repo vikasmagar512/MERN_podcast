@@ -11,6 +11,7 @@ export function fetchUsers() {
   const user = JSON.parse(localStorage.getItem('user'));
 
   return function (dispatch) {
+      debugger
     axios.get(API_URL, { headers: { authorization: user.token } })
       .then(response => {
         dispatch({

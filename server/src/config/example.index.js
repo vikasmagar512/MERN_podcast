@@ -1,13 +1,14 @@
 export const dbConfig = {
   secret: 'SomeRandomSecretString',
-  db: 'mongodb://localhost:auth/auth',
+  //db: 'mongodb://localhost:auth/auth',
+  db: 'mongodb://localhost/auth',
 };
 
 export const emailConfig = {
   service: 'Gmail',
   auth: {
-    user: 'email@gmail.com',
-    pass: 'Password',
+    user: 'your_gmail@gmail.com',
+    pass: 'your_gmail_Password',
   },
 };
 

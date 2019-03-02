@@ -14,7 +14,7 @@ class SignupVerify extends Component {
     this.email = this.props.location.query.email;
 
     if(!this.props.signup || !this.email) {
-      browserHistory.push('/reduxauth/signup');
+      browserHistory.push('/signup');
     }
   }
 

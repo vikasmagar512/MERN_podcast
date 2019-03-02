@@ -10,7 +10,7 @@ import { dbConfig } from './config';
 
 const app = express();
 
-mongoose.connect(dbConfig.db);
+mongoose.connect(dbConfig.db, { useMongoClient: true })
 mongoose.set('debug', true);
 
 app.use(compression());

@@ -9,8 +9,10 @@ import { tokenForUser } from '../helpers/token';
  */
 export const signin = (req, res) => {
   const { firstname, lastname, email } = req.user;
-
-  res.json({ token: tokenForUser(req.user), firstname, lastname, email });
+  console.log(firstname)
+  let k ={ token: tokenForUser(req.user), firstname, lastname, email };
+  console.log(k)
+  res.json(k)
 };
 
 /**
@@ -33,8 +35,11 @@ export const signup = (req, res, next) => {
     const user = new User({ firstname, lastname, email, password });
 
     user.save((err) => {
-      if (err) { return next(err); }
-
+      if (err) {
+        console.log(err)
+        return next(err);
+      }
+      console.log('sending out email')
       sendVerificationEmail(email, firstname, user.auth.token);
 
       res.json({ firstname, lastname, email });

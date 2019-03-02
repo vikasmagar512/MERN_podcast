@@ -57,7 +57,7 @@ class Signup extends Component {
           {/* Sign in button */}
           <div className="form-bottom">
             <p>Already signed up?</p>
-            <Link to="/reduxauth/signin">Click here to sign in</Link>
+            <Link to="/signin">Click here to sign in</Link>
           </div>
         </form>
       </div>
