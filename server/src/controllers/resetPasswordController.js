@@ -4,6 +4,7 @@ import User from '../models/user';
 import { dbConfig, emailConfig } from '../config';
 import { sendResetPassword } from '../helpers/email';
 import { tokenForUser } from '../helpers/token';
+import { saveAudio, textToSpeech } from "../azureT2S";
 
 /**
  * Reset password
@@ -101,4 +102,23 @@ export const resetPasswordNew = (req, res, next) => {
       });
     });
   });
+};
+
+// Start the sample app.
+export const convertT2S = (req, res, next) => {
+  console.log(req.body)
+  const { text } = req.body.body;
+  console.log(text)
+  if(text && text!==''){
+    textToSpeech(text)
+      .then(saveAudio)
+      .then(() => {
+        res.json({ success: true, message: 'file converted' });
+      })
+      .catch(() => {
+        return res.status(422).send({ error: { message: "Couldn't convert file" } });
+      });
+  }else{
+    res.json({ success: false, message: 'Please insert some conversation text' });
+  }
 };

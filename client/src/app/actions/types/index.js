@@ -13,3 +13,5 @@ export const AUTH_USER = 'AUTH_USER';
 export const UNAUTH_USER = 'UNAUTH_USER';
 
 export const FETCH_USERS = 'FETCH_USERS';
+export const FETCH_USER_PROFILE = 'FETCH_USER_PROFILE';
+export const FETCH_CONVERT_T2S = 'FETCH_CONVERT_T2S';

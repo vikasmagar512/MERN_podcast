@@ -25,7 +25,9 @@ module.exports = (options) => {
         test: /.jsx?$/,
         include: Path.join(__dirname, '../src/app'),
         loader: 'babel',
-      }],
+      },
+
+      ],
     },
     plugins: [
       new Webpack.DefinePlugin({
@@ -64,7 +66,13 @@ module.exports = (options) => {
     webpackConfig.module.loaders.push({
       test: /\.scss$/,
       loaders: ['style', 'css', 'sass'],
-    });
+    },
+
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
+      }
+    );
 
     webpackConfig.devServer = {
       contentBase: Path.join(__dirname, '../'),

@@ -1,0 +1,33 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 90px;
+  .button{
+    align-items: center;
+    min-height: 50px;
+    height: auto;
+    margin: 15px 0px;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+
+    .textDiv{
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      padding: 15px 15px;
+      background: red;
+      width: 120px;
+      min-height: 70px;
+      height: auto;
+      p{
+        font-family: sans-serif;
+        margin: 0px;
+      }
+    }
+  }
+}

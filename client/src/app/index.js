@@ -8,6 +8,7 @@ import { AUTH_USER } from './actions/types/index';
 
 import reducers from './reducers';
 import routes from './routes';
+import 'bootstrap/dist//css/bootstrap.min.css';
 
 import './components/bundle.scss';
 

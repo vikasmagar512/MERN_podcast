@@ -1,0 +1,64 @@
+.podcast {
+  background: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .centerStyle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .enclosure{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+
+    .upload-btn-wrapper {
+      background: black;
+      border: 1px solid deeppink;
+      overflow: hidden;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-self: center;
+      .uploadImage{
+        height: 100px;
+        background: deeppink;
+        position: relative;
+      }
+      input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+      }
+    }
+  }
+  .actions{
+    //width: 200px;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+  }
+  .centerDiv{
+    display: flex;
+    justify-content: center;
+  }
+  .editable{
+    padding: 15px 15px;
+    color: white;
+    /* max-height: 50px; */
+    height: 315px;
+    overflow-y: scroll;
+    border: 1px solid white;
+  }
+}

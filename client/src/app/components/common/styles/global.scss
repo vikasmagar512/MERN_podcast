@@ -4,11 +4,13 @@ body {
   font-family: 'Nunito', sans-serif;
   font-weight: lighter;
   letter-spacing: .5px;
-  background-color: $light-gray;
-  color: $light-black;
+  //background-color: $light-gray;
+  background-color: $black;
+  color: $white;
   margin: 0;
   padding: 0;
   font-size: 18px;
+
   @include mobile-ipad {
     font-size: 14px;
   }
@@ -43,26 +45,28 @@ h1 {
 }
 
 .container {
-  background-color: $white;
-  padding: 30px 0 60px 0;
-  max-width: 640px;
-  border: 1px solid $gray;
-  border-bottom: 2px solid $gray;
-  border-radius: 5px;
-  margin: 60px auto 0 auto;
+  //background-color: $white;
+  //background-color: $white;
+  color: $white;
+  padding: 30px 0 30px 0;
+  //max-width: 640px;
+  //border: 1px solid $gray;
+  //border-bottom: 2px solid $gray;
+  //border-radius: 5px;
+  //margin: 60px auto 0 auto;
 
-  @include mobile-ipad {
-    width: 90%;
-  }
+  //@include mobile-ipad {
+  //  width: 90%;
+  //}
 }
 
 .form-container {
   padding: 0 100px;
 
-  @include mobile {
-    padding: 0 20px;
-
-  }
+  //@include mobile {
+  //  padding: 0 20px;
+  //
+  //}
   margin: 0 auto;
 }
 
@@ -86,4 +90,9 @@ h1 {
 
 .resended {
   color: $green;
+}
+
+.btnPink {
+  background-color: $deepPink !important;
+  color: white !important;
 }

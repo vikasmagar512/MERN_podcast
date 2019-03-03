@@ -5,3 +5,4 @@ package-lock.json
 /dist/config/index.js
 .DS_Store
 npm-debug.log
+.env

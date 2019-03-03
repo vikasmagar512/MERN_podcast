@@ -7,6 +7,18 @@ import cors from 'cors';
 import compression from 'compression';
 import router from './router';
 import { dbConfig } from './config';
+// Requires request for HTTP requests
+const request = require('request');
+// Requires fs to write synthesized speech to a file
+const fs = require('fs');
+const xmlbuilder = require('xmlbuilder');
+const result = require('dotenv').config();
+
+if (result.error) {
+    throw result.error;
+}
+
+console.log(result.parsed);
 
 const app = express();
 
